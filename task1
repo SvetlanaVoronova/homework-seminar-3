@@ -1,0 +1,16 @@
+# Задайте список из нескольких чисел.
+# Напишите программу, которая найдёт сумму элементов списка, стоящих на нечётной позиции.
+# Пример: [2, 3, 5, 9, 3] -> на нечётных индексы элементы 3 и 9, ответ: 12
+
+def index_odd(list_num):
+    s = 0
+    for i in range(len(list_num)):
+        if i % 2 != 0:
+            s += list_num[i]
+    print(f"Сумма равна: {s}")
+
+
+list_num = [2, 3, 5, 9, 3]
+index_odd(list_num)
+list_num = list(map(int, input("Введите числа:\n").split()))
+index_odd(list_num)
